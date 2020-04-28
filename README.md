@@ -2,7 +2,7 @@
 **这里是k8s安装监控的yml文件和线上的模板(json文件)**
 ## 第一步
 **安装nfs或使用其他nfs**
-**yum install -y rpcbind nfs-utils**
+**centos里运行:yum install -y rpcbind nfs-utils**
 **需要配置可加载的目录/nfs/prometheus/data,/nfs/grafana/data并配置k8s里的prometheus和grafana应用有权限加载和可以读写这些目录,就是 showmount -e 显示/nfs/grafana/data    172.0.0.0/8
 /nfs/prometheus/data 172.0.0.0/8
    同时修改prometheus.yaml和grafana.yaml里的nfs的ip为真实的nfs的ip(目前写172.16.62.158)**
