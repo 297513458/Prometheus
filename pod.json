@@ -36,7 +36,7 @@
     }
   ],
   "id": null,
-  "title": "Docker Dashboard",
+  "title": "k8s看板",
   "description": "Docker Monitoring Template",
   "tags": [
     "docker"
@@ -118,7 +118,7 @@
             }
           ],
           "thresholds": "65, 90",
-          "title": "Memory usage",
+          "title": "内存信息",
           "type": "singlestat",
           "valueFontSize": "80%",
           "valueMaps": [
