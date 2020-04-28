@@ -6,6 +6,8 @@
 **需要配置可加载的目录/nfs/prometheus/data,/nfs/grafana/data并配置k8s里的prometheus和grafana应用有权限加载和可以读写这些目录,就是 showmount -e
    显示/nfs/grafana/data    172.0.0.0/8  
    /nfs/prometheus/data 172.0.0.0/8    
+   (vim /etc/exports 配置/nfs/prometheus/data 172.0.0.0/8(rw,sync,insecure,no_subtree_check,no_root_squash)
+/nfs/grafana/data 172.0.0.0/8(rw,sync,insecure,no_subtree_check,no_root_squash))
    同时修改prometheus.yaml和grafana.yaml里的nfs的ip为真实的nfs的ip(目前写172.16.62.158)**
 ## 第二步 
 **安装namespace.yaml或执行kubectl apply -f namespace.yaml**
